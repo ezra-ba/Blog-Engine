@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1 class="name"><a href="#home">MyBlog</a></h1>
+            <div class="dropdown">
+                <div class="dropdown_burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="">Blog</a>
+                    <a href="">About</a>
+                    <a href="">Connect</a>
+                    <a href="">Learn</a>
+                    <a href="">Post   <i class="fa fa-lock write_key"></i> <p class="write_message">LOGIN REQUIRED</p></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="body_wrap" id="body_wrap">
+            <div class="btn_wrap">
+                <div>
+                    <button id="newPost_btn" class="btn">Add post <i class="fa fa-plus-square"></i></button>
+                </div>
+                <div>
+                    <button id="deletePost_btn" class="btn">Delete post <i class="fa fa-minus-square"></i></button>
+                </div>
+            </div>
+            
+            <!-- Create new Entry - Elements -->
+            <div id="newPost_modal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <form>
+                    <h1 id="newPost_head">New Blog Post</h1><br>
+                    <label for="title">Title:</label><br>
+                    <input type="text" name="title" id="newPost_title" value=""><br>
+                    <label for="body">Body:</label><br>
+                    <textarea name="body" id="newPost_body" cols="30" rows="10" value=""></textarea>
+                  </form>
+                  <button id="newPost_submit" class="btn">Submit</button>
+                </div>
+            </div>
+
+            <h1 id="welcome">Welcome! <br> Write your first blog post <br> </h1>
+
+            <!-- Testing around with post format -->
+
+            <div class="post" style="display: none;">
+
+                <div class="post_Header">
+                    <h1>Blog Post #${postNumber}</h1>
+                    <label class="checkbox_container">
+                        <input type="checkbox" id="checkbox0">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+    
+                <div class="post_Body">
+                    <h2 class="post_Title">${title}</h2>
+                    <p>${body}</p>
+    
+                    <div class="social">
+                        <div class="social_like">
+                            <a href="#" class="fa fa-heart social_icon" id="like_button"></a>
+                            <input type="number" id="like_counter" value="0" readonly>
+                        </div>
+    
+                        <div class="social_share">
+                            <a href="https://facebook.com/" class="fa fa-facebook social_icon"></a>
+                            <a href="#https://twitter.com/" class="fa fa-twitter social_icon"></a>
+                            <a href="#https://instagram.com/" class="fa fa-instagram social_icon"></a>
+                            <a href="#" class="fa fa-copy social_icon"></a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+
+
+
+
+
+        <!-- / Testing aroungd with post format -->
+
+            <div class="entry" id="entry">
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
